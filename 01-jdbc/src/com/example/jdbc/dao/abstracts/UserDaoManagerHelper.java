@@ -5,13 +5,13 @@ import java.util.List;
 
 import com.example.jdbc.entitiy.User;
 
-public interface UserDaoManagerHelper<T> {
+public interface UserDaoManagerHelper<User> {
 	
-	boolean create(T object) throws SQLException;
+	boolean create(User user) throws SQLException;
 
-	List<T> read() throws SQLException;
+	List<User> read() throws SQLException;
 
-	boolean update(T object) throws SQLException;
+	boolean update(User user) throws SQLException;
 
 	boolean delete(int userId) throws SQLException;
 }
