@@ -3,12 +3,14 @@ package com.example.jdbc.business;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface UserManagerHelper<T> {
-	boolean create(T object) throws SQLException;
+import com.example.jdbc.entitiy.User;
 
-	List<T> read() throws SQLException;
+public interface UserManagerHelper {
+	boolean create(User user) throws SQLException;
 
-	boolean update(T object) throws SQLException;
+	List<User> read() throws SQLException;
 
-	boolean delete(T object) throws SQLException;
+	boolean update(User user) throws SQLException;
+
+	boolean delete(User user) throws SQLException;
 }

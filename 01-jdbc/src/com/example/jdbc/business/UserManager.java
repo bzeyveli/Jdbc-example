@@ -7,7 +7,7 @@ import java.util.List;
 import com.example.jdbc.dao.abstracts.UserDaoManagerHelper;
 import com.example.jdbc.entitiy.User;
 
-public class UserManager implements UserManagerHelper<User> {
+public class UserManager implements UserManagerHelper {
 
 	private UserDaoManagerHelper userDaoManagerHelper;
 

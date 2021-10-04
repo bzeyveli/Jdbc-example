@@ -76,14 +76,14 @@ public class UserDaoManager implements UserDaoManagerHelper<User> {
 		try {
 			preparedStatement.setDouble(1, geo.getLat());
 			preparedStatement.setDouble(2, geo.getLgn());
-			try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
-	            if (generatedKeys.next()) {
-	                geo.setId(generatedKeys.getInt(1));
-	            }
-	            else {
-	                throw new SQLException("Hata oluþtu.");
-	            }
-	        }
+//			try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+//	            if (generatedKeys.next()) {
+//	                geo.setId(generatedKeys.getInt(1));
+//	            }
+//	            else {
+//	                throw new SQLException("Hata oluþtu.");
+//	            }
+//	        }
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -100,14 +100,14 @@ public class UserDaoManager implements UserDaoManagerHelper<User> {
 			preparedStatement.setString(1, company.getName());
 			preparedStatement.setString(2, company.getCatchPhrase());
 			preparedStatement.setString(3, company.getBs());
-			 try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
-		            if (generatedKeys.next()) {
-		                company.setId(generatedKeys.getInt(1));
-		            }
-		            else {
-		                throw new SQLException("Hata oluþtu.");
-		            }
-		        }
+//			 try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+//		            if (generatedKeys.next()) {
+//		                company.setId(generatedKeys.getInt(1));
+//		            }
+//		            else {
+//		                throw new SQLException("Hata oluþtu.");
+//		            }
+//		        }
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

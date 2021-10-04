@@ -19,7 +19,6 @@ public final class JdbcUtils {
 	public static Connection getConnection() {
 
 		try {
-			connection.setAutoCommit(false);
 			LogUtils.info("Db properties okunuyor...");
 			Properties properties = DbConfigUtil.readDbProperties();
 			LogUtils.info("Db properties okundu.");
@@ -55,7 +54,6 @@ public final class JdbcUtils {
 		try {
 			connection = getConnection();
 			preparedStatement = connection.prepareStatement(sql,columnNames);
-		connection.rollback();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

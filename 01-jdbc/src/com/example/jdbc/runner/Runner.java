@@ -14,7 +14,7 @@ import com.example.jdbc.utils.JdbcUtils;
 
 public class Runner {
 	public static void main(String[] args) {
-		// JdbcUtils.getConnection();
+		
 		User user = new User();
 		user.setName("bekir");
 		user.setEmail("bekir zeyveli");
@@ -40,7 +40,7 @@ public class Runner {
 		user.setAddress(address);
 		user.setCompany(company);
 	
-		UserManagerHelper<User> userManagerHelper  = new UserManager(new UserDaoManager());
+		UserManagerHelper userManagerHelper  = new UserManager(new UserDaoManager());
 		try {
 			userManagerHelper.create(user);
 		} catch (SQLException e) {
